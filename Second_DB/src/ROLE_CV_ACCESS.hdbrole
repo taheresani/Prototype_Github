@@ -1,0 +1,11 @@
+{
+	"role":{
+	  "name": "Second_prj.Second_DB::ROLE_CV_ACCESS",
+	  "schema_privileges": [
+		    {
+		   "privileges": ["EXECUTE", "SELECT METADATA", 
+		    			  "SELECT"]
+	    	}
+		]
+	}
+}

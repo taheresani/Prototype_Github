@@ -1,0 +1,27 @@
+ID: Second_prj
+_schema-version: '2.0'
+version: 0.0.1
+modules:
+  - name: Second_DB
+    type: hdb
+    path: Second_DB
+    requires:
+      - name: hdi_Second_DB
+  - name: web
+    type: html5
+    path: web
+    requires:
+      - name: hdi_Second_DB
+      - name: UAA-service
+resources:
+  - name: hdi_Second_DB
+    parameters:
+      config:
+        schema: SECOND_SCHEMA
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+  - name: UAA-service
+    type: com.sap.xs.uaa-space
+    parameters:
+      config-path: ./xs-security.json

@@ -1,0 +1,25 @@
+{
+
+"xsappname": "Second_prj",
+
+"scopes": [ { "name": "$XSAPPNAME.view", "description": "View data" },
+
+              { "name": "$XSAPPNAME.create", "description": "Create data"}
+
+            ],
+
+"role-templates": [ { "name": "Second_prj_view",
+
+"description": "Role for viewing data",
+
+"scope-references": [ "$XSAPPNAME.view" ] },
+
+                      { "name": "Second_prj_Create",
+
+                        "description": "Role for creating data",
+
+"scope-references": [ "$XSAPPNAME.create","$XSAPPNAME.view"] }
+
+                    ]
+
+}

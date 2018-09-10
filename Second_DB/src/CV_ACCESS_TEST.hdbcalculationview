@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Second_prj.Second_DB::CV_ACCESS_TEST" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CV_ACCESS_TEST"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Second_prj.Second_DB::TAB_DEF.Table1">
+    <resourceUri>Second_prj.Second_DB::TAB_DEF.Table1</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="id">
+        <descriptions defaultDescription="id"/>
+      </viewAttribute>
+      <viewAttribute id="name">
+        <descriptions defaultDescription="name"/>
+      </viewAttribute>
+      <viewAttribute id="dept">
+        <descriptions defaultDescription="dept"/>
+      </viewAttribute>
+      <viewAttribute id="income">
+        <descriptions defaultDescription="income"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Second_prj.Second_DB::TAB_DEF.Table1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="id" source="id"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="name" source="name"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="dept" source="dept"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="income" source="income"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="id" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="id"/>
+      <keyMapping columnObjectName="Projection_1" columnName="id"/>
+    </attribute>
+    <attribute id="name" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="name"/>
+      <keyMapping columnObjectName="Projection_1" columnName="name"/>
+    </attribute>
+    <attribute id="dept" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="dept"/>
+      <keyMapping columnObjectName="Projection_1" columnName="dept"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="income" order="4" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="income"/>
+      <measureMapping columnObjectName="Projection_1" columnName="income"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="-188" y="152"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

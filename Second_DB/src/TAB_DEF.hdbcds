@@ -1,0 +1,23 @@
+namespace Second_prj.Second_DB;
+
+context TAB_DEF {
+entity Table1{
+		Key id			: String(10) not null;
+		    name		: String(100);
+		    dept		: String(20);
+		    income		: Double;
+};
+entity Table2{
+		Key id			: String(10) not null;
+		    Skill		: String(100);
+		    Project		: String(20);
+		    PerDayBill	: Double;
+};	
+entity Master_ID{
+       Key id			: String(10) not null;
+		   name			: String(100);
+		   Sirname		: String(100);
+		   Age			: Integer;
+		   City			: String(100);
+};
+};
